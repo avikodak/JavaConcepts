@@ -1,4 +1,4 @@
-package com.avikoda.designpatterns.concurrency.threadpool;
+package com.avikodak.designpatterns.concurrency.threadpool;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;

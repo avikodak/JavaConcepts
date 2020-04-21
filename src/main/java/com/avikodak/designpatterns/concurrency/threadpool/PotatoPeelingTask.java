@@ -1,4 +1,4 @@
-package com.avikoda.designpatterns.concurrency.threadpool;
+package com.avikodak.designpatterns.concurrency.threadpool;
 
 public class PotatoPeelingTask extends Task {
 

@@ -1,4 +1,4 @@
-package com.avikoda.designpatterns.concurrency.threadpool;
+package com.avikodak.designpatterns.concurrency.threadpool;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
