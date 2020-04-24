@@ -1,4 +1,4 @@
-package com.avikodak.designpatterns.concurrency.threadpool;
+package com.avikodak.designpatterns.examples.concurrency.threadpool.humantask;
 
 public class CoffeeMakingTask extends Task {
 

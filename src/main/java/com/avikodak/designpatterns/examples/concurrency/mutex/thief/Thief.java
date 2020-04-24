@@ -1,4 +1,4 @@
-package com.avikodak.designpatterns.concurrency.mutex;
+package com.avikodak.designpatterns.examples.concurrency.mutex.thief;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.avikodak.designpatterns.concurrency.semaphore;
+package com.avikodak.designpatterns.examples.concurrency.semaphore.fruitshop;
 
 import java.util.ArrayList;
 import java.util.List;
