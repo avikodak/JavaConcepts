@@ -24,13 +24,13 @@ public class ObservableCreate {
         });
 
         // Subscriber one will listen to all events
-        finiteColdObservable.subscribe(e -> {
-            System.out.println("Subscriber 1 " + e);
+        finiteColdObservable.subscribe(subscribedObject -> {
+            System.out.println("Subscriber 1 " + subscribedObject);
         });
 
         // Subscriber two will also listen to all events
-        finiteColdObservable.subscribe(e -> {
-            System.out.println("Subscriber 2 " + e);
+        finiteColdObservable.subscribe(subscribedObject -> {
+            System.out.println("Subscriber 2 " + subscribedObject);
         });
 
         Observable<Integer> infiniteColdObservable = Observable.create(emitter -> {
@@ -46,26 +46,26 @@ public class ObservableCreate {
 
         // One Subscriber running in first thread
         new Thread(() -> {
-            infiniteColdObservable.subscribe(e -> {
-                System.out.println("Subscriber 1 " + e);
+            infiniteColdObservable.subscribe(subscribedObject -> {
+                System.out.println("Subscriber 1 " + subscribedObject);
             });
         }).start();
 
 
         // Second subscriber running in another thread
         new Thread(() -> {
-            infiniteColdObservable.subscribe(e -> {
-                System.out.println("Subscriber 2 " + e);
+            infiniteColdObservable.subscribe(subscribedObject -> {
+                System.out.println("Subscriber 2 " + subscribedObject);
             });
         }).start();
-        
+
         //Observable emitting error
         Observable<Integer> errorObservable = Observable.create(emitter -> {
             emitter.onError(new RuntimeException("Some exception"));
         });
 
         // Subscriber initialized to process error
-        errorObservable.subscribe(e -> {
+        errorObservable.subscribe(subscribedObject -> {
             System.out.println("received");
         }, throwable -> {
             System.err.println(throwable);
