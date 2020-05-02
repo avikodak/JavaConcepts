@@ -33,7 +33,6 @@ public class ObservableCreate {
             System.out.println("Subscriber 2 " + e);
         });
 
-
         Observable<Integer> infiniteColdObservable = Observable.create(emitter -> {
             int counter = 0;
             while (true) {
@@ -59,6 +58,17 @@ public class ObservableCreate {
                 System.out.println("Subscriber 2 " + e);
             });
         }).start();
+        
+        //Observable emitting error
+        Observable<Integer> errorObservable = Observable.create(emitter -> {
+            emitter.onError(new RuntimeException("Some exception"));
+        });
 
+        // Subscriber initialized to process error
+        errorObservable.subscribe(e -> {
+            System.out.println("received");
+        }, throwable -> {
+            System.err.println(throwable);
+        });
     }
 }
