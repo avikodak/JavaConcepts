@@ -26,6 +26,8 @@ public class DeferObservable {
         // For this observer the range observable start and count will be 100 and 15
         // i.e it is similar to subscribing to Observable.range(100,15)
         deferObservable.subscribe(subscriber("Subscriber 2"));
+
+
     }
 
     private static Consumer<Integer> subscriber(String name) {
