@@ -15,7 +15,5 @@ public class ConcatObservableExample {
         Observable.just(1, 2, 3, 4, 5)
                 .concatWith(Observable.just(6, 7, 8, 9 , 10))
                 .subscribe(System.out::println);
-
-
     }
 }
