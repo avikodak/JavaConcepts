@@ -40,7 +40,7 @@ public class ObserverImplementation {
         }, () -> {
             System.out.println("Completed");
         }, disposable -> {
-            System.out.println("Disposable");
+            System.out.println("DisposableExample");
         });
     }
 }
